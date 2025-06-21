@@ -7,7 +7,7 @@ function App() {
 
   const fetchArtworks = () => {
     setLoading(true);
-    fetch("https://api.artic.edu/api/v1/artworks?page=2&limit=30")
+    fetch("https://api.artic.edu/api/v1/artworks?page=2&limit=100")
       .then((res) => res.json())
       .then((data) => {
         const artworksWithImages = data.data.filter((art) => art.image_id);
